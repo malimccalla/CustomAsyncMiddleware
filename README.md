@@ -2,7 +2,8 @@
 
 A little app built to expand knowledge of building custom middle in React/Redux.
 
-```export default function ({ dispatch }) {
+```
+export default function ({ dispatch }) {
   return next => action => {
     if (!action.payload || !action.payload.then) {
       return next(action);
@@ -13,4 +14,5 @@ A little app built to expand knowledge of building custom middle in React/Redux.
       dispatch(newAction);
     });
   };
-}```
+}
+```
